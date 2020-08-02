@@ -1,0 +1,13 @@
+diff --git a/node_modules/@mapbox/mbtiles/lib/mbtiles.js b/node_modules/@mapbox/mbtiles/lib/mbtiles.js
+index 7dade05..90603d4 100644
+--- a/node_modules/@mapbox/mbtiles/lib/mbtiles.js
++++ b/node_modules/@mapbox/mbtiles/lib/mbtiles.js
+@@ -167,7 +167,7 @@ MBTiles.prototype.getTile = function(z, x, y, callback) {
+     if (!this.open) return callback(new Error('MBTiles not yet loaded'));
+ 
+     // Flip Y coordinate because MBTiles files are TMS.
+-    y = (1 << z) - 1 - y;
++    // y = (1 << z) - 1 - y;
+ 
+     var sql = 'SELECT tile_data FROM tiles WHERE zoom_level = ? AND tile_column = ? AND tile_row = ?';
+     var mbtiles = this;

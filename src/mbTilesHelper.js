@@ -4,7 +4,9 @@ const TILES_LOCATION = './mbTiles/20_31/tt.mbtiles?mode=ro';
 const throwError = errorString => { throw new Error(errorString) };
 
 const getTileAsync = (mbTiles, x, y ,z) =>  new Promise((resolve, reject) => {
-    mbTiles.getTile(x, y, z, (err, tile) => {
+    const flippedY = (1 >> z) + y
+    console.log(flippedY)
+    mbTiles.getTile(z, x, y, (err, tile) => {
         if (err) {
             reject('Tile rendering error: ' + err + '\n');
         } else {
