@@ -6,7 +6,7 @@ const throwError = errorString => { throw new Error(errorString) };
 const getTileAsync = (mbTiles, x, y ,z) =>  new Promise((resolve, reject) => {
     mbTiles.getTile(z, x, y, (err, tile) => {
         if (err) {
-            reject('Tile rendering error: ' + err + '\n');
+            reject('Tile rendering error: ' + err + '\n' + ` z: ${z} x: ${x} y: ${y} ` );
         } else {
             resolve(tile);
         }
