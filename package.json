@@ -1,0 +1,23 @@
+{
+  "name": "mbtilesserver",
+  "version": "1.0.0",
+  "description": "Simple mbtile server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "@mapbox/mbtiles": "^0.12.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
